@@ -84,6 +84,7 @@ jobs:
         with:
           python-version: ${{ matrix.python-version }}
           cache: "poetry"
+          cache-dependency-path: enterprise/poetry.lock
       - name: Install Python dependencies using Poetry
         working-directory: ./enterprise
         run: poetry install --with dev,test
